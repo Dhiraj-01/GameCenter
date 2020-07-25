@@ -23,12 +23,22 @@ table {
 }
 #board td {
     border: 2px solid #fff;
+    text-align: center;
     cursor: pointer;
     width: 100px;
     height: 100px;
 }
-[id='1'] {
-    border: none;
+#board tr:first-child td {
+    border-top: none;
+}
+#board tr:last-child td {
+    border-bottom: none;
+}
+#board tr td:first-child {
+    border-left: none;
+}
+#board tr td:last-child {
+    border-right: none;
 }
 
 #navaigation {
