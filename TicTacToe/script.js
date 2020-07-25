@@ -20,7 +20,7 @@ var current_mode = 0;
 function clearBoard() {
     var cells = document.querySelectorAll(".cell");
     for(let i = 0; i < cells.length; i++) {
-        cells[i].innerHTML = "dhriaj";
+        cells[i].innerHTML = "";
     }
 }
 
