@@ -61,6 +61,7 @@ a {
 .score td {
     font-size: 70%;
     font-family: 'Courier New', Courier, monospace;
+    /* margin: 5px; */
     padding: 10px;
     text-align: center;
 }
@@ -70,7 +71,6 @@ a {
     font-family: monospace;
     color: #C0C0C0;
     position: fixed;
-    width: 50%;
     margin-left: 20px;
 }
 
