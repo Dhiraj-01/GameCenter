@@ -16,10 +16,10 @@ body {
 
 table {
     margin: auto;
-    margin-top: 100px;
     border-collapse: collapse;
 }
-td {
+
+#board td {
     border: 2px solid #fff;
     cursor: pointer;
     width: 100px;
@@ -40,9 +40,29 @@ a {
     text-align: center;
     color: #fff;
 }
-
 #navigation a:hover {
     color: #ff0066;
+}
+
+#mode {
+    font-size: 30px;
+    font-family: courier;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+#mode:hover {
+    color: lime;
+}
+
+.score {
+    margin-top: 15px;
+}
+.score td {
+    font-size: 70%;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    text-align: center;
 }
 
 #time {
@@ -53,4 +73,8 @@ a {
     width: 50%;
     bottom: 10px;
     margin-left: 20px;
+}
+
+div, p, td, tr {
+    border: 1px solid #ff0066;
 }

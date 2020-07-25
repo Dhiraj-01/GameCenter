@@ -16,7 +16,8 @@
         <a href="../contact.html">Contact</a>
     </nav>
 
-    <table>
+    <p id="mode" onclick="changeMode()">Player1 vs Player2</p>
+    <table id="board">
         <tr>
             <td id="1"></td>
             <td id="2"></td>
@@ -34,6 +35,20 @@
         </tr>
     </table>
     
+
+    <table class="score">
+        <tr>
+            <td id="1score">0</td>
+            <td id="tiescore">0</td>
+            <td id="2score">0</td>
+        </tr>
+        <tr>
+            <td id="player1">Player1</td>
+            <td id="tie">Tie</td>
+            <td id="player2">Player2</td>
+        </tr>
+    </table>
+
     <p id="time"></p>
 </body>
 </html>
