@@ -1,5 +1,4 @@
 function clearBoard() {
-
 }
 
 var cur_mode = 0;
@@ -7,13 +6,13 @@ function changeMode() {
     var mode = document.getElementById("mode");
     if (cur_mode == 0) {
         mode.innerHTML = "Player vs Computer";
-        document.getElementById("player1").innerHTML = "Player";
-        document.getElementById("player2").innerHTML = "Computer";
+        document.getElementById("player1").innerHTML = "Player(X)";
+        document.getElementById("player2").innerHTML = "Computer(O)";
     }
     else {
         mode.innerHTML = "Player1 vs Player2";
-        document.getElementById("player1").innerHTML = "Player1";
-        document.getElementById("player2").innerHTML = "Player2";
+        document.getElementById("player1").innerHTML = "Player1(X)";
+        document.getElementById("player2").innerHTML = "Player2(O)";
     }
     clearBoard();
     cur_mode = 1 - cur_mode;

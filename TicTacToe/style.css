@@ -13,22 +13,24 @@ body {
     margin: 30px;
     border-radius: 35px;
 }
+a {
+    text-decoration: none;
+}
 
 table {
     margin: auto;
     border-collapse: collapse;
 }
-
 #board td {
     border: 2px solid #fff;
     cursor: pointer;
     width: 100px;
     height: 100px;
 }
-
-a {
-    text-decoration: none;
+[id='1'] {
+    border: none;
 }
+
 #navaigation {
     margin: auto;
     padding-left: 30px;
@@ -61,7 +63,6 @@ a {
 .score td {
     font-size: 70%;
     font-family: 'Courier New', Courier, monospace;
-    /* margin: 5px; */
     padding: 10px;
     text-align: center;
 }
