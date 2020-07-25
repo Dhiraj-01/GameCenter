@@ -1,6 +1,7 @@
 function checkTime(i) {
     return (i < 10) ? "0" + i : i;
 }
+
 function startTime()
 {
     var today = new Date();
