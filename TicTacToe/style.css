@@ -28,6 +28,7 @@ table {
     width: 100px;
     height: 100px;
     cursor: pointer;
+    color: burlywood;
 }
 
 #board tr:first-child td {
