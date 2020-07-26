@@ -3,7 +3,7 @@ function d(p) {
 }
 
 const cross = '✕';
-const zero = '○';
+const zero = 'O';
 
 const player1 = cross;
 const player2 = zero;
@@ -74,7 +74,7 @@ function press(e) {
     {
         let sound = document.getElementById("sound");
         sound.play();
-        
+
         board[cell] = cur_player;
         document.getElementById(cell).innerHTML = cur_player;
         if(gameOver()) {
