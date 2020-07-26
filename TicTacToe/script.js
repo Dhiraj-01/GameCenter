@@ -43,6 +43,15 @@ function gameOver() {
     return false; 
 }
 
+function tie() {
+    for(let i = 0; i < board.length; i++) {
+        if(board[i] == null) {
+            return false;
+        }
+    }
+    return true;
+}
+
 var board = [null, null, null, null, null, null, null, null, null];
 
 function isEmpty(cell) {
@@ -71,6 +80,11 @@ function changePlayer() {
 
 function press(e) {
     let cell = e.target.id;
+    if(gameOver() || tie()) {
+        clearBoard();
+        return;
+    }
+
     if(isEmpty(cell))
     {
         let sound = document.getElementById("sound");
@@ -79,7 +93,7 @@ function press(e) {
         board[cell] = cur_player;
         document.getElementById(cell).innerHTML = cur_player;
         if(gameOver()) {
-            clearBoard();
+            // clearBoard();
         }
         else changePlayer();
     }
