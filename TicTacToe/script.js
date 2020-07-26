@@ -2,7 +2,7 @@ function d(p) {
     console.log(p);
 }
 
-const cross = '✖';
+const cross = '✕';
 const zero = '○';
 
 const player1 = cross;
