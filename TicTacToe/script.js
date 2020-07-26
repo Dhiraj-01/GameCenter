@@ -3,7 +3,7 @@ function d(p) {
 }
 
 const cross = '✕';
-const zero = 'O';
+const zero = '◯';
 
 const player1 = cross;
 const player2 = zero;
