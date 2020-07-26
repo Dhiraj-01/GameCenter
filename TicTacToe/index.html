@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
 </head>
-<body onload="startTime()">
+<body onload="startTime(); clearBoard();">
     <a href="./index.html">
         <h1 id="title">Tic Tac Toe</h1>
     </a>
@@ -16,32 +16,32 @@
         <a href="../contact.html">Contact</a>
     </nav>
 
-    <p id="mode" onclick="changeMode()">Player1 vs Player2</p>
+    <p id="mode" onclick="changeMode();">Player1 vs Player2</p>
 
     <table id="board">
         <tr>
-            <td class="cell" id="0"></td>
-            <td class="cell" id="1"></td>
-            <td class="cell" id="2"></td>
+            <td class="cell" id="0" onclick="press(event)"></td>
+            <td class="cell" id="1" onclick="press(event)"></td>
+            <td class="cell" id="2" onclick="press(event)"></td>
         </tr>
         <tr>
-            <td class="cell" id="3"></td>
-            <td class="cell" id="4"></td>
-            <td class="cell" id="5"></td>
+            <td class="cell" id="3" onclick="press(event)"></td>
+            <td class="cell" id="4" onclick="press(event)"></td>
+            <td class="cell" id="5" onclick="press(event)"></td>
         </tr>
         <tr>
-            <td class="cell" id="6"></td>
-            <td class="cell" id="7"></td>
-            <td class="cell" id="8"></td>
+            <td class="cell" id="6" onclick="press(event)"></td>
+            <td class="cell" id="7" onclick="press(event)"></td>
+            <td class="cell" id="8" onclick="press(event)"></td>
         </tr>
     </table>
     
 
     <table class="score">
         <tr>
-            <td id="1score">0</td>
-            <td id="tiescore">0</td>
-            <td id="2score">0</td>
+            <td id="player1-score">0</td>
+            <td id="tie-score">0</td>
+            <td id="player2-score">0</td>
         </tr>
         <tr>
             <td id="player1">Player1(X)</td>

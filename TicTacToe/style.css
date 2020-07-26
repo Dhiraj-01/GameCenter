@@ -24,6 +24,7 @@ table {
 #board td {
     border: 2px solid #fff;
     text-align: center;
+    font-size: 60px;
     cursor: pointer;
     width: 100px;
     height: 100px;
@@ -40,6 +41,17 @@ table {
 #board tr td:last-child {
     border-right: none;
 }
+
+
+.cell {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 
 #navaigation {
     margin: auto;
@@ -85,6 +97,6 @@ table {
     margin-left: 20px;
 }
 
-/* div, p, td, tr {
+/* * {
     border: 1px solid #ff0066;
 } */
