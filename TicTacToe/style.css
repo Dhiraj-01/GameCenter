@@ -21,14 +21,22 @@ table {
     margin: auto;
     border-collapse: collapse;
 }
-#board td {
+.cell {
     border: 2px solid #fff;
     text-align: center;
+    align-items: center;
     font-size: 60px;
     width: 100px;
     height: 100px;
     cursor: pointer;
     color: burlywood;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #board tr:first-child td {
@@ -44,15 +52,14 @@ table {
     border-right: none;
 }
 
-
-.cell {
+/* .cell {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
+} */
 
 #navaigation {
     margin: auto;
@@ -94,7 +101,7 @@ table {
     font-size: 20px;
     font-family: monospace;
     color: #C0C0C0;
-    position: fixed;
+    bottom: 10px;
     margin-left: 20px;
 }
 

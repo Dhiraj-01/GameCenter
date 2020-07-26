@@ -2,7 +2,7 @@ function d(p) {
     console.log(p);
 }
 
-// ◯ ✕✗
+// ◯ ✕ ✗
 const cross = '✕';
 const zero = '◯';
 
