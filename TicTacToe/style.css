@@ -25,10 +25,11 @@ table {
     border: 2px solid #fff;
     text-align: center;
     font-size: 60px;
-    cursor: pointer;
     width: 100px;
     height: 100px;
+    cursor: pointer;
 }
+
 #board tr:first-child td {
     border-top: none;
 }
@@ -51,7 +52,6 @@ table {
     -ms-user-select: none;
     user-select: none;
 }
-
 
 #navaigation {
     margin: auto;

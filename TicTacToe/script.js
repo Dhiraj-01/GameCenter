@@ -49,7 +49,6 @@ function isEmpty(cell) {
 }
 
 function clearBoard() {
-    cur_player = player1;
     var cells = document.querySelectorAll(".cell");
     for(let i = 0; i < cells.length; i++) {
         cells[i].innerHTML = null;
@@ -57,6 +56,7 @@ function clearBoard() {
     for(let i = 0; i < board.length; i++) {
         board[i] = null;
     }
+    cur_player = player1;
 }
 
 function changePlayer() {
@@ -72,6 +72,9 @@ function press(e) {
     let cell = e.target.id;
     if(isEmpty(cell))
     {
+        let sound = document.getElementById("sound");
+        sound.play();
+        
         board[cell] = cur_player;
         document.getElementById(cell).innerHTML = cur_player;
         if(gameOver()) {
