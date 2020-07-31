@@ -1,12 +1,18 @@
+body {
+    display: inline-block;
+    font-size: 20px;
+}
+
 a {
     text-decoration: none;
 }
 
-body {
-    font-size: 25px;
+#title {
+    border: 1px solid lime;
+    text-align: center;
 }
-
-* {
-    /* border: 1px solid wheat; */
-    padding: 10px;
+#title h1 {
+    margin: auto;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
 }

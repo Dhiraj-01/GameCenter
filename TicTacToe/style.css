@@ -21,6 +21,7 @@ table {
     margin: auto;
     border-collapse: collapse;
 }
+
 .cell {
     border: 2px solid #fff;
     text-align: center;
@@ -58,7 +59,7 @@ table {
     padding-left: 30px;
 }
 #navigation a {
-    display: inline;
+    display: inline-block;
     padding: 10px 10px;
     margin-left: 30px;
     text-align: center;
