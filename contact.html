@@ -7,7 +7,6 @@
     <style>
         * {
             font-size: 25px;
-            background: #f2f2f2;
         }
         .title {
             color:#7183FD;
@@ -18,6 +17,7 @@
             display: inline;
         }
         a {
+            display: inline-block;
             background-color: black;
             color: white;
             padding: 5px 20px;
@@ -77,11 +77,11 @@
         <div class="form">
             <form action="#home" method="POST">
                 <label for="name">Your name</label> <br>
-                <input type="text" name="name" id="name" required> <br>
+                <input type="text" name="name" id="name" placeholder="Dhiraj Govindvira" required> <br>
                 <label for="email">Your email</label> <br>
-                <input type="email" name="email" id="email" required> <br>
+                <input type="email" name="email" id="email" placeholder="xyz@gmail.com" required> <br>
                 <label for="message">Message</label> <br>
-                <textarea name="message" id="message" required></textarea> <br> <button> Send message </button>
+                <textarea name="message" id="message" placeholder="please add snake game :)" required></textarea> <br> <button> Send message </button>
             </form>
         </div>
     </div>
