@@ -16,6 +16,7 @@ a {
 #title {
     text-align: center;
     background: linear-gradient(to top right, #33ccff 5%, #ff99cc 100%);
+    border: 10px solid rgb(191, 162, 218);
 }
 #title .github, .name {
     margin: 20px;
@@ -32,9 +33,8 @@ a {
 }
 
 #navi {
-    background: linear-gradient(to bottom, #ffffcc 0%, #ccffff 100%);
-    text-align: center;
     padding: 5px;
+    background: linear-gradient(to bottom, #ffffcc 0%, #ccffff 100%);
     text-align: left;
 }
 #navi .link {
@@ -54,7 +54,7 @@ a {
     padding: 50px;
     background: linear-gradient(to bottom, #ffffff 0%, #ffffcc 100%);
     font-family: monospace;
-    border: 5px solid rgb(255, 227, 67);
+    border: 10px solid rgb(255, 227, 67);
 }
 .game {
     margin: 20px;
