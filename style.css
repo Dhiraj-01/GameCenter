@@ -18,7 +18,7 @@ a {
 #title {
     text-align: center;
     background: linear-gradient(to top right, #33ccff 5%, #ff99cc 100%);
-    border: 10px solid rgb(191, 162, 218);
+    border: 5px solid rgb(191, 162, 218);
 }
 #title .github, .name {
     margin: 20px;
