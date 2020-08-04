@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=1024">
     <link rel="stylesheet" href="./style.css">
     <title>Game Center</title>
+
+    <script>
+        let id = 0, time = -1;
+        let text = "Welcome to Game Center";
+        function typing()
+        {
+            if(id < text.length)
+            {
+                document.getElementById("title-name").innerHTML += text.charAt(id++);
+                time = setTimeout(typing, 100);
+            }
+            else clearTimeout(time);
+        }
+    </script>
 </head>
-<body>
+<body onload="typing();">
 
     <header id="title">
         <a class="github" href="https://github.com/Dhiraj-01/GameCenter" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/60/000000/github.png" />
+            <img src="https://img.icons8.com/ios-filled/65/000000/github.png" />
         </a>
-        <div class="name"> Welcome to Game Center </div>
+        <p class="name" id="title-name"></p>
     </header>
 
     <!-- <div class="line"></div> -->
@@ -44,14 +58,14 @@
                         Fifteen, Mystic Square and many others) is a sliding puzzle
                         that consists of a frame of numbered square tiles in random
                         order with one tile missing. The puzzle also exists in other
-                            sizes, particularly the smaller 8-puzzle. If the size is 3×3
-                            tiles, the puzzle is called the 8-puzzle or 9-puzzle, and if
-                            4×4 tiles, the puzzle is called the 15-puzzle or 16-puzzle
-                            named, respectively, for the number of tiles and the number
-                            of spaces. The object of the puzzle is to place the tiles in
-                            order by making sliding moves that use the empty space.
-                            <br> <br>
-                            <a href="https://en.wikipedia.org/wiki/15_puzzle">wikipedia</a>
+                        sizes, particularly the smaller 8-puzzle. If the size is 3×3
+                        tiles, the puzzle is called the 8-puzzle or 9-puzzle, and if
+                        4×4 tiles, the puzzle is called the 15-puzzle or 16-puzzle
+                        named, respectively, for the number of tiles and the number
+                        of spaces. The object of the puzzle is to place the tiles in
+                        order by making sliding moves that use the empty space.
+                        <br> <br>
+                        <a href="https://en.wikipedia.org/wiki/15_puzzle">wikipedia</a>
                         </td>
                 </tr>
                 <tr>
@@ -71,8 +85,7 @@
             <table>
                 <tr>
                     <td rowspan="2" class="info">
-                        Tic-Tac-Toe (American English), noughts and crosses (British English), or Xs and Os is a
-                        paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
+                        Tic-Tac-Toe (American English), noughts and crosses (British English), or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
                         <br> <br>
                         The Tic Tac Toe is a great way to pass your free timewhether you're standing in a line or spending time with your kids.
                         Stop wasting paper and savetrees. Because of the simplicity of Tic Tac Toe, it is often used as a pedagogical tool for teachingthe concepts of good sportsmanship and the branch of artificial intelligence.
@@ -117,8 +130,7 @@
                         The game involves controlling a single block or snakehead by turning only left or right by ninety degrees until you
                         manage to eat an apple. When you get the apple, the Snake grows an extra block or body segment.
                         <br> <br>
-                        If, or rather when, the snake bumps into the edge of the screen or accidentally eats himself the game is over. The more
-                        apples the snake eats the higher the score.
+                        If, or rather when, the snake bumps into the edge of the screen or accidentally eats himself the game is over. The more apples the snake eats the higher the score.
                     </td>
                 </tr>
                 <tr>
@@ -156,7 +168,10 @@
                 </tr>
             </table>
         </div>
-
     </div>
+
+    <footer>
+        <p class="copyright">Dhiraj Govindvira - &copy; 2020</p>
+    </footer>
 </body>
 </html>

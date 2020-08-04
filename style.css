@@ -52,8 +52,11 @@ a {
 
 /* .game table {
     border-collapse: collapse;
-} */
-
+} 
+.game .info {
+    border: 2px solid brown;
+}
+*/
 .gamelist {
     padding: 50px;
     background: linear-gradient(to bottom, #ffffff 0%, #ffffcc 100%);
@@ -91,4 +94,14 @@ a {
 }
 #future span {
     font-size: 25px;
+}
+
+footer {
+    background-color: #333333;
+}
+p.copyright {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.6em;
 }
