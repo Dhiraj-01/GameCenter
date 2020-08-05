@@ -34,12 +34,12 @@ a {
     display: inline-block;
 }
 #title .name {
-    margin-left: 20px;
-    font-size: 50px;
     color: white;
-    text-shadow: 2px 0px 12px #000;
-    font-style: italic;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    font-style: italic;
+    margin-left: 20px;
+    text-shadow: 2px 0px 12px #000;
 }
 
 #navi {
@@ -49,8 +49,8 @@ a {
 }
 #navi .link {
     color: black;
-    margin-left: 50px;
     font-family: monospace;
+    margin-left: 50px;
 }
 #navi .link:hover {
     font-weight: bolder;
@@ -92,22 +92,21 @@ a {
 
 
 #future {
-    padding: 15px;
-    text-align: center;
-    font-size: 30px;
     color: brown;
     font-family: monospace;
+    font-size: 30px;
+    padding: 15px;
+    text-align: center;
 }
 #future span {
     font-size: 25px;
 }
 
-footer {
+.copyright {
     background-color: #333333;
-}
-p.copyright {
-    padding: 10px;
-    text-align: center;
+    bottom: 0px;
     color: #fff;
     font-size: 0.6em;
+    padding: 10px;
+    text-align: center;
 }
