@@ -88,10 +88,17 @@
             <table>
                 <tr>
                     <td rowspan="2" class="info">
-                        Tic-Tac-Toe (American English), noughts and crosses (British English), or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
+                        Tic-Tac-Toe (American English), noughts and crosses (British English), 
+                        or Xs and Os is a paper-and-pencil game for two players, X and O, 
+                        who take turns marking the spaces in a 3×3 grid. 
+                        The player who succeeds in placing three of their marks in a horizontal, 
+                        vertical, or diagonal row is the winner.
                         <br> <br>
-                        The Tic Tac Toe is a great way to pass your free timewhether you're standing in a line or spending time with your kids.
-                        Stop wasting paper and savetrees. Because of the simplicity of Tic Tac Toe, it is often used as a pedagogical tool for teachingthe concepts of good sportsmanship and the branch of artificial intelligence.
+                        The Tic Tac Toe is a great way to pass your free timewhether you're 
+                        standing in a line or spending time with your kids.
+                        Stop wasting paper and savetrees. Because of the simplicity of Tic Tac Toe, 
+                        it is often used as a pedagogical tool for teachingthe concepts of 
+                        good sportsmanship and the branch of artificial intelligence.
                         <br> <br>
                         <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">wikipedia</a>
                     </td>
@@ -113,7 +120,7 @@
 
         <div id="future">
             # Future Games <br>
-            <span>However you can play it on other site :)</span>
+            <span> However you can play it on other site :) </span>
         </div>
 
         <div class="line"></div>
@@ -175,5 +182,19 @@
     <div class="copyright">
         Dhiraj Govindvira - &copy; 2020
     </div>
+
+    <script>
+        var navbar = document.getElementById("navi");
+        var sticky = navbar.offsetTop;
+
+        window.onscroll = function () {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+
+        };
+    </script>
 </body>
 </html>

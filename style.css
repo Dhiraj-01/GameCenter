@@ -24,8 +24,8 @@ a {
 #title {
     text-align: center;
     background: linear-gradient(to top right, #33ccff 5%, #ff99cc 100%);
-    /*background: linear-gradient(to bottom, #66ccff 0%, #ffccff 100%);
-    background: linear-gradient(to top left, #ffffff 0%, #99ccff 100%);*/
+    /* background: linear-gradient(to bottom, #66ccff 0%, #ffccff 100%);
+    background: linear-gradient(to top left, #ffffff 0%, #99ccff 100%); */
     border: 5px solid rgb(191, 162, 218);
 }
 #title .github, .name {
@@ -43,11 +43,12 @@ a {
 }
 
 #navi {
-    padding: 10px;
+    padding: 5px;
     background: linear-gradient(to bottom, #ffffcc 0%, #ccffff 100%);
     text-align: left;
 }
 #navi .link {
+    font-size: 90%;
     color: black;
     font-family: monospace;
     margin-left: 50px;
@@ -107,6 +108,20 @@ a {
     bottom: 0px;
     color: #fff;
     font-size: 0.6em;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
+}
+
+.content {
+    padding: 20px;
+}
+.sticky {
+    top: 0;
+    position: fixed;
+    font-size: 25px;
+    width: 100%;
+    border-bottom: 10px solid rgb(255, 227, 67);
+}
+.sticky + .content {
+    padding-top: 70px;
 }
