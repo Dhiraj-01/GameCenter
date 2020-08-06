@@ -51,7 +51,7 @@
             font-size: 150%;
             font-family: monospace;
         }
-        input[type='text'], [type='email'] {
+        #email, #name, #message, #subject {
             box-sizing: border-box;
             width: 500px;
             margin: 10px 0px;
@@ -60,14 +60,8 @@
             border: 1px solid #f8615c;
         }
         #message {
-            box-sizing: border-box;
-            width: 500px;
             height: 150px;
-            margin: 10px 0px;
-            padding: 10px;
-            border: 1px solid #f8615c;
             border-radius: 5px;
-            font-size: 20px;
         }
         button {
             margin-top: 10px;
@@ -87,15 +81,28 @@
         <h1 class="title"> Contact </h1>
         <a href="./index.html" >Home</a>
         <p> Contact us and clarify any doubts you have about Game Center or report a problem.</p>
-        <br> <br> <br>
+        <br> <br>
         <div class="form">
             <form action="#home" method="POST">
                 <label for="name">Your name</label> <br>
                 <input type="text" name="name" id="name" placeholder="Dhiraj Govindvira" required> <br>
+
                 <label for="email">Your email</label> <br>
                 <input type="email" name="email" id="email" placeholder="xyz@gmail.com" required> <br>
+
+                <label for="subject">Subject</label> <br>
+                <select id="subject">
+                    <option value="Choose a subject ..">Choose a subject ..</option>
+                    <option value="Suggest a feature">Suggest a feature</option>
+                    <option value="Report a problem">Report a problem</option>
+                    <option value="General information / contact">General information / contact</option>
+                </select>
+                <br>
+
                 <label for="message">Message</label> <br>
-                <textarea name="message" id="message" placeholder="please add snake game :)" required></textarea> <br> <button> Send message </button>
+                <textarea name="message" id="message" placeholder="please add snake game :)" required></textarea> <br> 
+                
+                <button> Send message </button>
             </form>
         </div>
     </div>
