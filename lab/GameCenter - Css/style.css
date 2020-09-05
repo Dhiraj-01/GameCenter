@@ -1,0 +1,49 @@
+body {
+    font-size: 35px;
+    padding: 0;
+    margin: 0;
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry2.png");
+}
+a {
+    text-decoration: none;
+}
+
+#title {
+    margin-top: 20px;
+    text-align: center;
+}
+#title a, p {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#title p {
+    margin-left: 10px;
+    text-align: center;
+    font-size: 50px;
+    color: #7183FD;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navi {
+    text-align: center;
+    padding: 20px;
+}
+.navi a {
+    color: coral;
+    margin: 20px;
+    font-family: monospace;
+}
+
+img, p {
+    vertical-align: middle;
+}
+
+.games {
+    padding-left: 50px;
+}
+.games a {
+    font-family: monospace;
+    border: 1px solid palevioletred;
+}

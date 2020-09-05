@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body onload="startTime()">
+    <a href="./index.html">
+        <h1 id="title">Tic Tac Toe</h1>
+    </a>
+    <nav id="navigation">
+        <a href="../index.html">Home</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
+
+    <label for="mode">Player vs Player</label>
+    <table>
+        <tr>
+            <td id="1"></td>
+            <td id="2"></td>
+            <td id="3"></td>
+        </tr>
+        <tr>
+            <td id="4"></td>
+            <td id="5"></td>
+            <td id="6"></td>
+        </tr>
+        <tr>
+            <td id="7"></td>
+            <td id="8"></td>
+            <td id="9"></td>
+        </tr>
+    </table>
+    
+    <div id="score">
+        <p class="player1">
+            <span class="p1">Player1 (x)</span>
+            <span class="p2">Player</span>
+            <span class="score"></span>
+        </p>
+        <p class="ties">
+            <span>Tie</span>
+            <span class="score"></span>
+        </p>
+        <p class="player2">
+            <span class="p1">Player2</span>
+            <span class="p2">Computer</span>
+            <span class="score"></span>
+        </p>
+    </div>
+
+    <p id="time"></p>
+</body>
+</html>

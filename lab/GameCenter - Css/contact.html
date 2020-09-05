@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        * {
+            font-size: 25px;
+        }
+        .title {
+            font-size: 45px;
+            color:#7183FD;
+            font-family: monospace;
+            font-style: italic;
+        }
+        p {
+            display: inline;
+            font-style: italic;
+            font-size: 120%;
+            font-weight: 500;
+        }
+        a {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 20px;
+            left: 50px;
+        }
+        a:hover {
+            background: #fff;
+            color: red;
+        }
+        .contact {
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .form {
+            text-align: left;
+            width: 500px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 150%;
+            font-family: monospace;
+        }
+        input[type='text'], [type='email'] {
+            box-sizing: border-box;
+            width: 500px;
+            margin: 10px 0px;
+            padding: 5px 15px;
+            font-size: 20px;
+            border: 1px solid #f8615c;
+        }
+        #message {
+            box-sizing: border-box;
+            width: 500px;
+            height: 150px;
+            margin: 10px 0px;
+            padding: 10px;
+            border: 1px solid #f8615c;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        button {
+            margin-top: 10px;
+            font-size: 20px;
+            text-align: center;
+            background-color: #f8615c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px 20px;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact">
+        <h1 class="title"> Contact </h1>
+        <a href="./index.html" >Home</a>
+        <p> Contact us and clarify any doubts you have about Game Center or report a problem.</p>
+        <br> <br> <br>
+        <div class="form">
+            <form action="#home" method="POST">
+                <label for="name">Your name</label> <br>
+                <input type="text" name="name" id="name" placeholder="Dhiraj Govindvira" required> <br>
+                <label for="email">Your email</label> <br>
+                <input type="email" name="email" id="email" placeholder="xyz@gmail.com" required> <br>
+                <label for="message">Message</label> <br>
+                <textarea name="message" id="message" placeholder="please add snake game :)" required></textarea> <br> <button> Send message </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

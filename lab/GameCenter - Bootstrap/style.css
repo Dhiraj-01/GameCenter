@@ -1,0 +1,125 @@
+#development {
+    font-size: 15px;
+    color: red;
+    margin: 5px;
+}
+
+html {
+    height: 100%;
+}
+body {
+    font-size: 35px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+.line {
+    background-color: #000;
+    height: 3px;
+}
+
+#title {
+    text-align: center;
+    background: linear-gradient(to top right, #33ccff 5%, #ff99cc 100%);
+    border: 5px solid rgb(191, 162, 218);
+}
+#title .github, .name {
+    margin: 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
+#title .name {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    font-style: italic;
+    margin-left: 20px;
+    text-shadow: 2px 0px 12px #000;
+}
+
+#navi {
+    padding: 5px;
+    background: linear-gradient(to bottom, #ffffcc 0%, #ccffff 100%);
+    text-align: left;
+}
+#navi .link {
+    font-size: 90%;
+    color: black;
+    font-family: monospace;
+    margin-left: 50px;
+}
+#navi .link:hover {
+    font-weight: bolder;
+}
+
+/* .game table {
+    border-collapse: collapse;
+} 
+.game .info {
+    border: 2px solid brown;
+}
+*/
+.gamelist {
+    padding: 50px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffcc 100%);
+    font-family: monospace;
+    border: 10px solid rgb(255, 227, 67);
+}
+.game {
+    margin: 20px;
+    text-align: center;
+}
+.game .img img {
+    padding: 50px;
+    height: 250px;
+}
+.game .info {
+    font-size: 22px;
+    text-align: left;
+    padding: 20px;
+}
+.game .head {
+    padding: 10px;
+    color: #f71184;
+}
+.head:hover {
+    font-weight: bolder;
+}
+
+
+#future {
+    color: brown;
+    font-family: monospace;
+    font-size: 30px;
+    padding: 15px;
+    text-align: center;
+}
+#future span {
+    font-size: 25px;
+}
+
+.copyright {
+    background-color: #333333;
+    bottom: 0px;
+    color: #fff;
+    font-size: 0.6em;
+    padding: 5px;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+}
+.sticky {
+    top: 0;
+    position: fixed;
+    font-size: 25px;
+    width: 100%;
+    border-bottom: 10px solid rgb(255, 227, 67);
+}
+.sticky + .content {
+    padding-top: 70px;
+}

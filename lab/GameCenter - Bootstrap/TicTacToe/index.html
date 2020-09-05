@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <link rel="stylesheet" href="./style.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body onload="clearBoard();">
+    
+    <a href="./index.html">
+        <h1 id="title">Tic Tac Toe</h1>
+    </a>
+
+    <nav id="navigation">
+        <a href="../index.html">Home</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
+
+    <p id="mode" onclick="changeMode();">Player1 vs Player2</p>
+
+    <table id="board">
+        <tr>
+            <td class="cell" id="0"></td>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="3"></td>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="6"></td>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+        </tr>
+    </table>
+    
+    <table class="score">
+        <tr>
+            <td id="player1-score">0</td>
+            <td id="tie-score">0</td>
+            <td id="player2-score">0</td>
+        </tr>
+        <tr>
+            <td id="player1">Player1(X)</td>
+            <td id="tie">Tie</td>
+            <td id="player2">Player2(O)</td>
+        </tr>
+    </table>
+
+    <!-- <p id="time"></p> -->
+    <audio id="sound" src="../click.mp3"></audio>
+    <script src="./script.js"></script>
+
+
+</body>
+</html>

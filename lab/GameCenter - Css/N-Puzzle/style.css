@@ -1,0 +1,18 @@
+body {
+    background-color: #000;
+    color: white;
+}
+#board {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+#board td {
+    box-sizing: border-box;
+    border: 1px solid white;
+    font-size: 45px;
+    font-weight: 1;
+    font-family: monospace;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+}
