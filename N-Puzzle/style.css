@@ -59,3 +59,12 @@ a {
     font-family: monospace;
     text-align: center;
 }
+
+#Reset {
+    text-align: center;
+}
+#Reset button {
+    margin: 0px 15px;
+    height: 30px;
+    font-size: 20px;
+}
