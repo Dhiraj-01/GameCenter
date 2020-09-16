@@ -3,6 +3,7 @@ const maxN = 8;
 
 var N = document.getElementById("n");
 var Board = document.getElementById("board");
+var step = 0;
 
 function getN() {
     if(N != null) {
@@ -32,6 +33,23 @@ function findEmpty() {
     }
     console.log("id = " + id);
     return id;
+}
+
+function Clear() {
+    step = 0;
+    $("#board").empty();
+    $("#msg").empty();
+}
+
+function gameOver() {
+    let n = getN();
+    for(let i = 0; i < n * n - 1; i++) {
+        let val = $("#" + i).text();
+        if(val != i + 1) {
+            return false;
+        }
+    }
+    return true;
 }
 
 document.body.addEventListener('keydown', function (event) {
@@ -66,12 +84,20 @@ document.body.addEventListener('keydown', function (event) {
         return;
     }
     
-    let X = $("#" + findVal(A[0], A[1])).text();
-    let Y = $("#" + findVal(B[0], B[1])).text();
+    step++;
+    let id1 = "#" + findVal(A[0], A[1]);
+    let id2 = "#" + findVal(B[0], B[1]);
 
-    $("#" + findVal(A[0], A[1])).text(Y);
-    $("#" + findVal(B[0], B[1])).text(X);
+    let X = $(id1).text();
+    let Y = $(id2).text();
 
+    $(id1).text(Y);
+    $(id2).text(X);
+
+    if(gameOver()) {
+        $("#board").empty();
+        $("#msg").append("Congratulation Game Over. <br> Total Step : " + step);
+    }
     // console.log("#" + findVal(A[0], A[1]));
     // console.log("#" + findVal(B[0], B[1]));
     // console.log("A : ", A);
@@ -94,6 +120,7 @@ function shuffle(array) {
 
 function generateMatrix()
 {
+    Clear();
     let n = getN();
     var arr = [];
     for(let i = 0; i < n * n; i++) {
@@ -102,7 +129,6 @@ function generateMatrix()
     shuffle(arr);
     console.log(arr);
 
-    $("#board").empty();
     for(let i = 0; i < n; i++) {
         let row = "<tr>";
         for(let j = 0; j < n; j++) {
