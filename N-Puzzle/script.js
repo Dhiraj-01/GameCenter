@@ -1,5 +1,12 @@
-const minN = 3;
-const maxN = 8;
+function d() {
+    for (var i = 0; i < arguments.length; i++) {
+        console.log(arguments[i]);
+    }
+    console.log('\n');
+}
+
+const minN = 2;
+const maxN = 10;
 
 var N = document.getElementById("n");
 var Board = document.getElementById("board");
@@ -98,12 +105,6 @@ document.body.addEventListener('keydown', function (event) {
         $("#board").empty();
         $("#msg").append("Congratulation Game Over. <br> Total Step : " + step);
     }
-    // console.log("#" + findVal(A[0], A[1]));
-    // console.log("#" + findVal(B[0], B[1]));
-    // console.log("A : ", A);
-    // console.log("B : ", B);
-    // console.log("X : ", X);
-    // console.log("Y : ", Y);
 }); 
 
 function shuffle(array) {
@@ -122,20 +123,54 @@ function generateMatrix()
 {
     Clear();
     let n = getN();
-    var arr = [];
-    for(let i = 0; i < n * n; i++) {
-        arr[i] = i;
+    var arr = new Array(n);
+    for(let i = 0; i < n; i++) {
+        arr[i] = new Array(n);
     }
-    shuffle(arr);
-    console.log(arr);
+
+    let r = new Array(n * n);
+    for(let i = 0; i < n * n; i++) {
+        r[i] = i;
+    }
+
+    while(1)
+    {
+        shuffle(r);
+        let pos = -1;
+        for (let i = 0; i < n * n; i++) {
+            if(r[i] == 0) {
+                pos = findIJ(i);
+                break;
+            }
+        }
+        let sum = (pos[0] + pos[1]) % 2;
+        for (let i = 0; i < n * n; i++) {
+            for (let j = i + 1; j < n * n; j++) {
+                if(r[j] == 0) continue;
+                else if(r[i] == 0) sum++;
+                else sum += (r[j] < r[i]);
+            }
+        }
+        d(r, sum);
+        if(sum % 2 == 0) {
+            break;
+        }
+    }
+
+    let id = 0;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = r[id++];
+        }
+    }
 
     for(let i = 0; i < n; i++) {
         let row = "<tr>";
         for(let j = 0; j < n; j++) {
-            if(arr[i * n + j] == 0) {
-                arr[i * n + j] = "";
+            if(arr[i][j] == 0) {
+                arr[i][j] = "";
             }
-            row += "<td id=" + findVal(i, j) + ">" + arr[findVal(i, j)] + "</td>";
+            row += "<td id=" + findVal(i, j) + ">" + arr[i][j] + "</td>";
         }
         row += "</tr>"
         $("#board").append(row);
