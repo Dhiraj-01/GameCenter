@@ -34,6 +34,52 @@ function findEmpty() {
     return id;
 }
 
+document.body.addEventListener('keydown', function (event) {
+    const key = event.key;
+
+    let A = findIJ(findEmpty());
+    let B = A.slice();
+
+    switch (key) {
+        case "ArrowLeft":
+            console.log("Left");
+            B[1]--;
+            break;
+        case "ArrowRight":
+            console.log("Right");
+            B[1]++;
+            break;
+        case "ArrowUp":
+            console.log("Up");
+            B[0]--;
+            break;
+        case "ArrowDown":
+            console.log("Down");
+            B[0]++;
+            break;
+        default:
+            return;
+    }
+
+    let n = getN();
+    if(A[0] < 0 || A[1] < 0 || B[0] < 0 || B[1] < 0 || A[0] >= n || A[1] >= n || B[0] >= n || B[1] >= n) {
+        return;
+    }
+    
+    let X = $("#" + findVal(A[0], A[1])).text();
+    let Y = $("#" + findVal(B[0], B[1])).text();
+
+    $("#" + findVal(A[0], A[1])).text(Y);
+    $("#" + findVal(B[0], B[1])).text(X);
+
+    // console.log("#" + findVal(A[0], A[1]));
+    // console.log("#" + findVal(B[0], B[1]));
+    // console.log("A : ", A);
+    // console.log("B : ", B);
+    // console.log("X : ", X);
+    // console.log("Y : ", Y);
+}); 
+
 function shuffle(array) {
     var id = array.length, temp, rid;
     while (0 !== id) {
@@ -49,7 +95,6 @@ function shuffle(array) {
 function generateMatrix()
 {
     let n = getN();
-
     var arr = [];
     for(let i = 0; i < n * n; i++) {
         arr[i] = i;
