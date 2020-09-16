@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=1024">
     <title>N Puzzle</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <a href="./index.html">
-    <h1 id="title">N Puzzle</h1>
+        <h1 id="title">N Puzzle</h1>
     </a>
     <nav id="navigation">
         <a href="../index.html">Home</a>
@@ -23,32 +23,14 @@
     </div>
 
     <table id="board">
-        <tr>
-            <td id="11">1</td>
-            <td id="12">2</td>
-            <td id="13">3</td>
-            <td id="14">4</td>
-        </tr>
-        <tr>
-            <td id="21">5</td>
-            <td id="22">6</td>
-            <td id="23">7</td>
-            <td id="24">8</td>
-        </tr>
-        <tr>
-            <td id="31">9</td>
-            <td id="32">10</td>
-            <td id="33">11</td>
-            <td id="34">12</td>
-        </tr>
-        <tr>
-            <td id="1">13</td>
-            <td id="2">14</td>
-            <td id="3">15</td>
-            <td id="4"></td>
-        </tr>
     </table>
-    
-    <p id="time"></p>
+
+    <script src="./script.js"></script>
+    <script>
+        generateMatrix();
+    </script>
+
+    <!-- extra lines -->
+    <div style="height: 200px;"> </div>
 </body>
 </html>
