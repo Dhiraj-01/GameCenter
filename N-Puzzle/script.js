@@ -7,11 +7,27 @@ function d() {
 
 const minN = 2;
 const maxN = 10;
+var step = 0;
+
+const music = [
+    // "../sounds/boom.wav",
+    "../sounds/clap.wav",
+    "../sounds/hihat.wav",
+    "../sounds/kick.wav",
+    "../sounds/openhat.wav",
+    "../sounds/ride.wav",
+    "../sounds/snare.wav",    
+    "../sounds/tink.wav",    
+    "../sounds/tom.wav",
+];
 
 var N = document.getElementById("n");
 var Board = document.getElementById("board");
-var step = 0;
+var sound = document.getElementById("sound");
 
+function rnd(l, r) {
+    return Math.floor(Math.random() * (r - l + 1)) + l;
+}
 function getN() {
     if(N != null) {
         return (Number)(N.innerHTML);
@@ -61,6 +77,9 @@ function gameOver() {
 
 document.body.addEventListener('keydown', function (event) {
     const key = event.key;
+
+    sound.setAttribute('src', music[rnd(0, music.length - 1)]);
+    sound.play();
 
     let A = findIJ(findEmpty());
     let B = A.slice();
@@ -151,7 +170,6 @@ function generateMatrix()
                 else sum += (r[j] < r[i]);
             }
         }
-        d(r, sum);
         if(sum % 2 == 0) {
             break;
         }
