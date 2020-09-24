@@ -79,6 +79,7 @@ document.body.addEventListener('keydown', function (event) {
     const key = event.key;
 
     sound.setAttribute('src', music[rnd(0, music.length - 1)]);
+    sound.load();
     sound.play();
 
     let A = findIJ(findEmpty());
