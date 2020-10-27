@@ -2,7 +2,7 @@
 <ul>
     <li> A <a href="https://dhiraj-01.github.io/GameCenter/">Website</a> in which user can play simple games. </li>
     <li>
-        Games supported
+        following Games are supported
         <ul>
           <li> TicTacToe </li>
           <li> N-Puzzle </li>
