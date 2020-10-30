@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Contact</title>
+</head>
+
+<body>
+    <a id="home" routerLink="/home">Home</a>
+    <div class="contact">
+        <h1 class="title"> Contact </h1>
+        <p> Contact us and clarify any doubts you have about Game Center or report a problem.</p>
+        <br> <br>
+        <div class="form">
+            <form action="#home" method="POST">
+                <label for="name">Your name</label> <br>
+                <input type="text" name="name" id="name" placeholder="Dhiraj Govindvira" required> <br>
+
+                <label for="email">Your email</label> <br>
+                <input type="email" name="email" id="email" placeholder="xyz@gmail.com" required> <br>
+
+                <label for="subject">Subject</label> <br>
+                <select id="subject">
+                    <option value="Choose a subject ..">Choose a subject ..</option>
+                    <option value="Suggest a feature">Suggest a feature</option>
+                    <option value="Report a problem">Report a problem</option>
+                    <option value="General information / contact">General information / contact</option>
+                </select>
+                <br>
+
+                <label for="message">Message</label> <br>
+                <textarea name="message" id="message" placeholder="please add snake game :)" required></textarea> <br>
+
+                <button> Send message </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -12,13 +12,13 @@ var step = 0;
 const music = [
     // "../sounds/boom.wav",
     "../sounds/clap.wav",
-    "../sounds/hihat.wav",
-    "../sounds/kick.wav",
-    "../sounds/openhat.wav",
-    "../sounds/ride.wav",
-    "../sounds/snare.wav",    
+    // "../sounds/hihat.wav",
+    // "../sounds/kick.wav",
+    // "../sounds/openhat.wav",
+    // "../sounds/ride.wav",
+    // "../sounds/snare.wav",    
+    // "../sounds/tom.wav",
     "../sounds/tink.wav",    
-    "../sounds/tom.wav",
 ];
 
 var N = document.getElementById("n");

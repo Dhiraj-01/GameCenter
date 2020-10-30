@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>N Puzzle</title>
+    <!-- <script src="https://cajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+</head>
+
+<body >
+    <a routerLink="/npuzzle">
+        <h1 id="title">N Puzzle</h1>
+    </a>
+    <nav id="navigation">
+        <a routerLinkActive="active" routerLink="/home">Home</a>
+        <a routerLinkActive="active" routerLink="/contact">Contact</a>
+    </nav>
+
+    <div id="N">
+        <button (click)="decreseN()">-</button>
+        <span id="n">4</span>
+        <button (click)="incerseN()">+</button>
+        <p id="msg"></p>
+    </div>
+
+    <table id="board">
+    </table>
+
+    <div id="Reset">
+        <button (click)="generateMatrix()">Reset</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+body,
+html {
+    height: 100%;
+    font-size: 25px;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffcc 100%);
+}
+/* * {
+    border: 1px solid black;
+} */
+.title {
+    font-size: 45px;
+    color: #7183FD;
+    text-shadow: 2px 0px 0px #000;
+    font-family: monospace;
+    font-style: italic;
+}
+
+p {
+    display: inline;
+    font-style: italic;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+.contact {
+    text-align: center;
+    box-sizing: border-box;
+    padding-bottom: 5em;
+}
+
+.form {
+    text-align: left;
+    width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 150%;
+    font-family: monospace;
+}
+
+#email,
+#name,
+#message,
+#subject {
+    box-sizing: border-box;
+    width: 500px;
+    margin: 10px 0px;
+    padding: 5px 15px;
+    font-size: 20px;
+    border: 1px solid #f8615c;
+}
+
+#message {
+    height: 150px;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #f8615c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 7px;
+}
+
+
+#home {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 25;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    left: 50px;
+}
+
+#home:hover {
+    color: red;
+    font-size: 100%;
+    background: #fff;
+    border: 1px solid black;
+    transition: color;
+    transition-duration: 1s;
+}
