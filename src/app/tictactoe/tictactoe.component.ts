@@ -16,6 +16,8 @@ export class TictactoeComponent implements OnInit {
     for(let i = 0; i < 9; i++) {
       $("#" + i).on("click", this.mousePress);
     }
+    this.easy = 1;
+    $('#toogle').toggleClass('hide');
     this.audio = document.createElement('audio');
     this.audio.setAttribute('src', '../../assets/click.mp3');
   }
@@ -25,7 +27,9 @@ export class TictactoeComponent implements OnInit {
   current_player = null;
   game_mode = null;
   board = [null, null, null, null, null, null, null, null, null];
+  win_cell = [null, null, null];
   audio = null;
+  easy = null;
 
   winning_combinations = [
     [0, 1, 2],
@@ -38,7 +42,6 @@ export class TictactoeComponent implements OnInit {
     [2, 5, 8]
   ]
 
-  win_cell = [null, null, null];
 
   checkWin() {
     for (let i = 0; i < this.winning_combinations.length; i++) {
@@ -95,7 +98,7 @@ export class TictactoeComponent implements OnInit {
     $("#msg").text('');
 
     if (this.game_mode == 1) {
-      if (this.rnd(0, 5) <= 2) {
+      if (this.rnd(0, 5) <= 3) {
         let r = [0, 2];
         let x = r[this.rnd(0, 1)];
         let y = r[this.rnd(0, 1)];
@@ -191,6 +194,63 @@ export class TictactoeComponent implements OnInit {
     bestMove();
   }
 
+  easyMove() {
+
+    for (let i = 0; i < this.winning_combinations.length; i++) {
+
+      let cell1 = this.winning_combinations[i][0];
+      let cell2 = this.winning_combinations[i][1];
+      let cell3 = this.winning_combinations[i][2];
+
+      let id = -1;
+      if (this.board[cell1] === this.player2 && this.board[cell2] === this.player2 && this.board[cell3] === null) {
+        id = cell3;
+      }
+      else if (this.board[cell2] === this.player2 && this.board[cell3] === this.player2 && this.board[cell1] === null) {
+        id = cell1;
+      }
+      else if (this.board[cell1] === this.player2 && this.board[cell3] === this.player2 && this.board[cell2] === null) {
+        id = cell2;
+      }
+      if (id != -1) {
+        this.board[id] = this.player2;
+        $("#" + id).text(this.player2);
+        return;
+      }
+    }
+
+    for (let i = 0; i < this.winning_combinations.length; i++) {
+
+      let cell1 = this.winning_combinations[i][0];
+      let cell2 = this.winning_combinations[i][1];
+      let cell3 = this.winning_combinations[i][2];
+
+      let id = -1;
+      if (this.board[cell1] === this.player1 && this.board[cell2] === this.player1 && this.board[cell3] === null) {
+        id = cell3;
+      }
+      else if (this.board[cell2] === this.player1 && this.board[cell3] === this.player1 && this.board[cell1] === null) {
+        id = cell1;
+      }
+      else if (this.board[cell1] === this.player1 && this.board[cell3] === this.player1 && this.board[cell2] === null) {
+        id = cell2;
+      }
+      if(id != -1) {
+        this.board[id] = this.player2;
+        $("#" + id).text(this.player2);
+        return;
+      }
+    }
+
+    for(let i = 0; i < 9; i++) {
+      if(this.board[i] === null) {
+        this.board[i] = this.player2;
+        $("#" + i).text(this.player2);
+        return;
+      }
+    }
+  }
+
   gameOver(x = 0) {
     let res = this.checkWin();
     if(x != 0) {
@@ -265,7 +325,12 @@ export class TictactoeComponent implements OnInit {
       }
       this.changePlayer();
       if(this.game_mode == 1 && this.current_player == this.player2) {
-        this.computerMove();
+        if(this.easy) {
+          this.easyMove();
+        }
+        else {
+          this.computerMove();
+        }
         this.changePlayer();
         this.gameOver();
       }
@@ -277,6 +342,8 @@ export class TictactoeComponent implements OnInit {
   }
 
   changeGameMode = () => {
+    $('#toogle').toggleClass('hide');
+
     if (this.game_mode == 0) {
       $("#mode").text("Player vs Computer");
       $("#player1").text("Player(X)");
@@ -284,7 +351,7 @@ export class TictactoeComponent implements OnInit {
     }
     else {
       $("#mode").text("Player1 vs Player2");
-      $("#player1").text("Player(X)");
+      $("#player1").text("Player1(X)");
       $("#player2").text("Player2(O)");
     }
     
@@ -294,5 +361,10 @@ export class TictactoeComponent implements OnInit {
     
     this.game_mode ^= 1;
     this.init();
+  }
+
+  changeDiff() {
+    this.easy ^= 1;
+    // console.log("easy : ", this.easy);
   }
 }

@@ -19,7 +19,6 @@
     </nav>
 
     <p id="mode">Player1 vs Player2</p>
-
     <table id="board">
         <tr>
             <td class="cell" id="0"></td>
@@ -39,7 +38,14 @@
     </table>
 
     <div id="msg"></div>
-
+    <div id="toogle">
+        Easy &nbsp;
+        <label class="switch">
+            <input type="checkbox" (click)="changeDiff()">
+            <span class="slider round"></span>
+        </label>
+        &nbsp; Hard
+    </div>
     <table class="score">
         <tr>
             <td id="player1-score">0</td>
