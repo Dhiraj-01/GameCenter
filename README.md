@@ -1,15 +1,9 @@
 # GameCenter
-<ul>
-    <li> A <a href="https://dhiraj-01.github.io/GameCenter/">Website</a> in which user can play simple games. </li>
-    <li>
-        following Games are supported
-        <ul>
-          <li> TicTacToe </li>
-          <li> N-Puzzle </li>
-        </ul>
-    </li>
-    <li> URL : https://dhiraj-01.github.io/GameCenter/ </li>
-    <li>
-        Technology used : Html, Css, Javascript, Angular, Bootstrap, Nodejs
-    </li>
-</ul>
+
+- *this project is incomplete (Archived)*
+- Here is complete project in Angular **[Game Center](https://github.com/Dhiraj-01/Game-Center)**
+-
+- a website in which user can play simple games
+- link : https://dhiraj-01.github.io/GameCenter/
+- following games are supported `Tictactoe` and `N-Puzzle`
+- Technology : `html, css, javascript`
